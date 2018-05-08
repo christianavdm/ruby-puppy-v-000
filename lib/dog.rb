@@ -1,3 +1,4 @@
+'require pry'
 class Dog 
   @@all = []
   
@@ -5,6 +6,7 @@ class Dog
   
   
   def initialize(name)
+    binding.pry
     @name = name
     @@all << name
   end
