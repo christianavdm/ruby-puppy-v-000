@@ -1,18 +1,19 @@
 require 'pry'
 class Dog 
-  attr_accessor :name
   
-   @@all = [] 
+  attr_accessor :name
+  @@all = [] 
+   
   def initialize(name)
     @name = name
     @@all << name
   end
   
-  def clear_all
+  def self.clear_all
     @@all = []
   end
   
-  def all
+  def self.all
     @@all.each do |name|
       puts name
     end
